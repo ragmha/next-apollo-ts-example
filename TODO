@@ -1,7 +1,9 @@
-- [ ] styled-components
+- [X] styled-components
 - [ ] jest
 - [ ] react-testing-library
 - [ ] apollo
+- [ ] docker
+
 -----
 - [ ] serverless framework
 - [ ] cypress
