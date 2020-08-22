@@ -1,6 +1,6 @@
 - [X] styled-components
-- [ ] jest
-- [ ] react-testing-library
+- [X] jest
+- [X] react-testing-library
 - [ ] apollo
 - [ ] docker
 
