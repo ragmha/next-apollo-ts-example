@@ -1,8 +1,9 @@
 - [X] styled-components
 - [X] jest
 - [X] react-testing-library
+- [X] docker
 - [ ] apollo
-- [ ] docker
+
 
 -----
 - [ ] serverless framework

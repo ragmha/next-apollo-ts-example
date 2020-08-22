@@ -4,6 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "build-docker": "docker build -t next-app .",
+    "build-docker-multistage": "docker build -t next-app -f ./Dockerfile.multistage .",
     "start": "next start",
     "type-check": "tsc",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
