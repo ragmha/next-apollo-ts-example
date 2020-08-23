@@ -40,6 +40,12 @@
       "rules": {
         "react/prop-types": 0
       }
+    },
+    {
+      "files": ["./types/generated.gql.types.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": 0
+      }
     }
   ],
   "plugins": ["testing-library", "jest-dom"]
