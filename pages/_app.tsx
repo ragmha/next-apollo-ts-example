@@ -1,5 +1,9 @@
 import { ThemeProvider } from 'styled-components'
-import { AppProps } from 'next/app'
+import { AppProps as NextAppProps } from 'next/app'
+import { useApollo } from 'lib/aolloClient'
+import { NormalizedCacheObject, ApolloProvider } from '@apollo/client'
+import { NextPage } from 'next'
+import { ReactNode } from 'react'
 
 const theme = {
   colors: {
@@ -7,11 +11,23 @@ const theme = {
   },
 }
 
-export const App = ({ Component, pageProps }: AppProps) => (
-  <ThemeProvider theme={theme}>
-    <Component {...pageProps} />
-  </ThemeProvider>
-)
+interface AppProps extends NextAppProps {
+  pageProps: {
+    initialApolloState: NormalizedCacheObject
+    children?: ReactNode
+  }
+}
+
+export const App: NextPage<AppProps> = ({ Component, pageProps }) => {
+  const apolloClient = useApollo(pageProps.initialApolloState)
+  return (
+    <ThemeProvider theme={theme}>
+      <ApolloProvider client={apolloClient}>
+        <Component {...pageProps} />
+      </ApolloProvider>
+    </ThemeProvider>
+  )
+}
 
 // Only uncomment this method if you have blocking data requirements for
 // every single page in your application. This disables the ability to
