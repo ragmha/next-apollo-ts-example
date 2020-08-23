@@ -1,9 +1,9 @@
-import Hello from './Hello'
+import InfoBox from './InfoBox'
 import { render } from '@utils/test'
 
-describe('Hello', () => {
+describe('InfoBox', () => {
   it('should match the snapshot', () => {
-    const { container } = render(<Hello name="Miau" />)
+    const { container } = render(<InfoBox>Info</InfoBox>)
     expect(container).toMatchSnapshot()
   })
 })

@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components'
 import { AppProps as NextAppProps } from 'next/app'
-import { useApollo } from 'lib/aolloClient'
+import { useApollo } from 'lib/apolloClient'
 import { NormalizedCacheObject, ApolloProvider } from '@apollo/client'
 import { NextPage } from 'next'
 import { ReactNode } from 'react'

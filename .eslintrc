@@ -42,7 +42,7 @@
       }
     },
     {
-      "files": ["./types/generated.gql.types.tsx"],
+      "files": ["./types/generated.gql.types.tsx", "./services/**/*.tsx"],
       "rules": {
         "@typescript-eslint/explicit-module-boundary-types": 0
       }

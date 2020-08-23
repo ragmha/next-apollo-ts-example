@@ -1,3 +1,3 @@
-export interface HelloProps {
+export type HelloProps = {
   name: string
 }
