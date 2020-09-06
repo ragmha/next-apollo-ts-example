@@ -1,5 +1,5 @@
 export type HeaderLinkProps = {
-  active: boolean
+  active?: boolean
 }
 
 export type HeaderProps = HeaderLinkProps
