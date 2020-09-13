@@ -22,3 +22,21 @@ export const StyledButton = styled.button`
     width: 0;
   }
 `
+
+export const StyledDiv = styled.div`
+  align-items: center;
+  display: flex;
+`
+
+export const StyledSpan = styled.span`
+  font-size: 14px;
+  margin-right: 5px;
+`
+
+export const StyledAnchor = styled.a`
+  font-size: 14px;
+  margin-right: 10px;
+  text-decoration: none;
+  padding-bottom: 0;
+  border: 0;
+`

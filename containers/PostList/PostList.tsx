@@ -3,7 +3,14 @@ import { useAllPosts } from '@services'
 import { Section, ErrorMessage } from '@components'
 import { PostUpvoter } from '@containers'
 
-import { StyledListUnordered, StyledButton } from './PostList.styles'
+import {
+  StyledListUnordered,
+  StyledButton,
+  StyledList,
+  StyledDiv,
+  StyledSpan,
+  StyledAnchor,
+} from './PostList.styles'
 
 export const PostList: FC = () => {
   const {
@@ -26,13 +33,13 @@ export const PostList: FC = () => {
     <Section>
       <StyledListUnordered>
         {allPosts?.map((post, index) => (
-          <li key={post.id}>
-            <div>
-              <span>{index + 1}</span>
-              <a href={post.url}>{post.title}</a>
+          <StyledList key={post.id}>
+            <StyledDiv>
+              <StyledSpan>{index + 1}</StyledSpan>
+              <StyledAnchor href={post.url}>{post.title}</StyledAnchor>
               <PostUpvoter id={post.id} votes={post.votes} />
-            </div>
-          </li>
+            </StyledDiv>
+          </StyledList>
         ))}
       </StyledListUnordered>
       {areMorePosts && (

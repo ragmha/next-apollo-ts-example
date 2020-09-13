@@ -38,12 +38,7 @@
     {
       "files": ["**/*.tsx"],
       "rules": {
-        "react/prop-types": 0
-      }
-    },
-    {
-      "files": ["./types/generated.gql.types.tsx", "./services/**/*.tsx"],
-      "rules": {
+        "react/prop-types": 0,
         "@typescript-eslint/explicit-module-boundary-types": 0
       }
     }

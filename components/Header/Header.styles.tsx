@@ -9,6 +9,7 @@ export const StyledHeaderLink = styled.a<HeaderLinkProps>`
   font-size: 14px;
   margin-right: 15px;
   text-decoration: none;
+  cursor: pointer;
 
   ${({ active }) =>
     active &&

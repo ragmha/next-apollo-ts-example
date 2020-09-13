@@ -1,6 +1,8 @@
 import { FC } from 'react'
 import { useCreatePost } from '@services'
 
+import { Input, Header, Form } from './Submit.styles'
+
 export const Submit: FC = () => {
   const { loading, createPost } = useCreatePost()
   const handleSubmit = (event: any) => {
@@ -11,20 +13,18 @@ export const Submit: FC = () => {
     const url = formData.get('url') as string
     form.reset()
 
-    createPost({
-      variables: { title, url },
-    })
+    createPost({ variables: { title, url } })
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>Submit</h1>
-      <input placeholder="title" name="title" type="text" required />
-      <input placeholder="url" name="url" type="url" required />
+    <Form onSubmit={handleSubmit}>
+      <Header>Submit</Header>
+      <Input placeholder="title" name="title" type="text" required />
+      <Input placeholder="url" name="url" type="url" required />
       <button type="submit" disabled={loading}>
         Submit
       </button>
-    </form>
+    </Form>
   )
 }
 

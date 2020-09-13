@@ -20,7 +20,7 @@ export const Header: FC<HeaderProps> = () => {
       </Link>
       <Link href="/client-only">
         <StyledHeaderLink active={pathname === '/client-only'}>
-          Client-only
+          Client-Only
         </StyledHeaderLink>
       </Link>
     </StyledHeader>
